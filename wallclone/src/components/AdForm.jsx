@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import '../style/AdForm.css'
 
 const AdForm = () => {
     const [ adData, setAdData ] = useState({
-        nombre: '',
+        name: '',
         description: '',
-        precio: '',
+        price: '',
+        category: '',
+        location: '',
+        image: ''
     });
 
     const inputChange = (event) => {
@@ -17,11 +21,20 @@ const AdForm = () => {
 
     const  submitAd = (event) => {
         event.preventDefault();
+        alert('¡Anuncio creado correctamente');
+        setAdData({
+            name: '',
+            description: '',
+            price: '',
+            category: '',
+            location: '',
+            image: '',
+        });
     };
 
     return (
-        <div>
-            <form onSubmit={submitAd}>
+        <div className='ad-container'>
+            <form onSubmit={submitAd} className='ad-form'>
                 <input
                 type="text"
                 name="nombre"
@@ -39,11 +52,31 @@ const AdForm = () => {
                 type="number"
                 name="precio"
                 placeholder='Precio'
-                value={adData.precio}
+                value={adData.price}
                 onChange={inputChange}
                 required
                 />
-                <button type='submit'>Create Ad</button>
+                <input
+                type="text"
+                name='category'
+                placeholder='Category'
+                value={adData.category}
+                onChange={inputChange}
+                />
+                <input
+                type="text"
+                name='location'
+                placeholder='Location'
+                value={adData.location}
+                onChange={inputChange}
+                />
+                <input
+                type="text"
+                name='image'
+                placeholder='Image URL'
+                value={adData.image}
+                onChange={inputChange}/>
+                <button type='submit' className='adSubmit'>Create Ad</button>
             </form>
         </div>
     );
