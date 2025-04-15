@@ -1,5 +1,6 @@
 .App {
   padding-top: 100px;
   min-height: 100vh;
-  overflow-x: hidden;
+  background-color: #222;
+  margin: 0;
 }
