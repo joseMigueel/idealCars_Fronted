@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../style/AdForm.css'
 
-const AdForm = () => {
+const AdForm = ({ onAddAd }) => {
     const [ adData, setAdData ] = useState({
         name: '',
         description: '',
@@ -21,6 +21,7 @@ const AdForm = () => {
 
     const  submitAd = (event) => {
         event.preventDefault();
+        onAddAd(adData);
         alert('¡Anuncio creado correctamente');
         setAdData({
             name: '',
@@ -46,14 +47,14 @@ const AdForm = () => {
                 <textarea
                 name="description"
                 placeholder='Descripción'
-                value={adData.description}
+                value={adData.descripción}
                 onChange={inputChange}
                 required/>
                 <input
                 type="number"
                 name="precio"
                 placeholder='Precio'
-                value={adData.price}
+                value={adData.precio}
                 onChange={inputChange}
                 required
                 />
@@ -61,14 +62,14 @@ const AdForm = () => {
                 type="text"
                 name='category'
                 placeholder='Categoría'
-                value={adData.category}
+                value={adData.categoria}
                 onChange={inputChange}
                 />
                 <input
                 type="text"
                 name='location'
                 placeholder='Ubicación'
-                value={adData.location}
+                value={adData.ubicacion}
                 onChange={inputChange}
                 />
                 <input
