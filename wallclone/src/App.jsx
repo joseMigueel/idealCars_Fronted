@@ -13,8 +13,11 @@ function App() {
 
   return (
   <div className='App'>
-    <NavBar onAddClick={pressButton} adVisible={showForm} />
-    {showForm && <AdForm /> }
+    <NavBar />
+    <button className='adButton' onClick={pressButton}>
+    {showForm ? 'Cerrar' : 'Añadir anuncio'}
+    </button>
+    {showForm && <AdForm />}
   </div>
   );
 }
