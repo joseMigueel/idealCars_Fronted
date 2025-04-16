@@ -38,13 +38,14 @@ const AdForm = () => {
                 <input
                 type="text"
                 name="nombre"
-                placeholder="Ad nombre"
+                placeholder="Título del anuncio"
                 value={adData.nombre}
                 onChange={inputChange}
                 required
                 />
                 <textarea
                 name="description"
+                placeholder='Descripción'
                 value={adData.description}
                 onChange={inputChange}
                 required/>
@@ -59,21 +60,21 @@ const AdForm = () => {
                 <input
                 type="text"
                 name='category'
-                placeholder='Category'
+                placeholder='Categoría'
                 value={adData.category}
                 onChange={inputChange}
                 />
                 <input
                 type="text"
                 name='location'
-                placeholder='Location'
+                placeholder='Ubicación'
                 value={adData.location}
                 onChange={inputChange}
                 />
                 <input
                 type="text"
                 name='image'
-                placeholder='Image URL'
+                placeholder='URL de imagen'
                 value={adData.image}
                 onChange={inputChange}/>
                 <button type='submit' className='adSubmit'>Create Ad</button>
