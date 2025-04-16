@@ -3,6 +3,12 @@
   min-height: 100vh;
   background-color: #222;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .adButton {
@@ -27,9 +33,41 @@
   transform: translateY(-2px);
 }
 
+.closeButton {
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.button_close_top {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: -1rem; 
+}
+
+.closeButton:hover {
+  background-color: #e63636;
+  transform: translateY(-2px);
+}
 @media (min-width: 768px) {
-  .add-ad-button {
+
+  .adButton {
+    position: static;
+    margin: 2rem auto 1rem auto;
+    display: block;
     font-size: 1.1rem;
     padding: 0.9rem 1.5rem;
   }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  overflow-x: hidden;
 }
