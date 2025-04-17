@@ -19,7 +19,6 @@ const AdList = ({ ads, onDeleteAd }) => {
                     <p><strong>Año:</strong> {ad.year}</p>
                     <p><strong>Precio:</strong> {ad.price} €</p>
                     <p><strong>Kilómetros:</strong> {ad.kilometer.toLocaleString()} km</p>
-                    <p><strong>Ubicación:</strong> {ad.location}</p>
                     <p><strong>Vendedor:</strong> {ad.owner}</p>
                     {ad.image && (
                         <img src={ad.image} alt="Imagen del anuncio" />
