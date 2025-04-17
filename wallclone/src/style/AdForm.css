@@ -51,6 +51,26 @@ input::placeholder, textarea::placeholder{
     background-color: #21a1f1;
 }
 
+.km {
+    text-align: center;
+    font-weight: bold;
+    color: #61dafb;
+    margin-bottom: 1px;
+}
+
+.img_prev {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.img_prev img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0,4);
+}
+
 @media (min-width: 768px) {
     .ad-container {
         padding: 3rem 2rem;

@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React,{ useState, useEffect } from 'react'
 import NavBar from './components/Navbar';
 import AdForm from './components/AdForm';
 import "./style/navBar.css"
@@ -7,7 +7,14 @@ import AdList from './components/AdList';
 
 function App() {
   const [showForm, setShowForm] = useState(false);
-  const [ads, setAds] = useState([]); 
+  const [ads, setAds] = useState(() => {
+    const storeAds = localStorage.getItem('ads');
+    return storeAds ? JSON.parse(storeAds) : [];
+  }); 
+
+  useEffect(() => {
+    localStorage.setItem('ads', JSON.stringify(ads));
+  }, [ads]);
 
   const pressButton = () => {
     setShowForm(!showForm);

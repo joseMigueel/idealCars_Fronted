@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/adList.css'
 
 
 
@@ -13,11 +14,13 @@ const AdList = ({ ads, onDeleteAd }) => {
                     <button className='deleteButton' onClick={() => onDeleteAd(index)} title='eliminar anuncio'>
                         x
                     </button>
-                    <h3>{ad.title}</h3>
-                    <p>{ad.description}</p>
+                    <h3>{ad.name} ({ad.model})</h3>
+                    <p><strong>Color:</strong> {ad.color}</p>
+                    <p><strong>Año:</strong> {ad.year}</p>
                     <p><strong>Precio:</strong> {ad.price} €</p>
-                    <p><strong>Categoría:</strong> {ad.category}</p>
+                    <p><strong>Kilómetros:</strong> {ad.kilometer.toLocaleString()} km</p>
                     <p><strong>Ubicación:</strong> {ad.location}</p>
+                    <p><strong>Vendedor:</strong> {ad.owner}</p>
                     {ad.image && (
                         <img src={ad.image} alt="Imagen del anuncio" />
                     )}
