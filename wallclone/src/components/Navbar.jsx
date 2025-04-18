@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import '../style/navBar.css';
 
-const NavBar = () => {
+const NavBar = ({ isLoggedIn, userName, onShowLogin, onLogout }) => {
+  
   return (
     <header className='navBar'>
-      <h1>Workroom</h1>
-      
+      <h1>IdealCars</h1>
+      <div>
+        {isLoggedIn ? (
+          <>
+          <span>hola, {userName}</span>
+          <button className='logoutButton' onClick={onLogout}>
+            Cerrar sesión
+            </button>
+          </>
+        ) : (
+          <button className='loginButton' onClick={onShowLogin}>
+            Iniciar sesión
+          </button>
+        )}
+      </div>
     </header>
   )
 }
