@@ -21,7 +21,7 @@ const AdForm = ({ onAddAd }) => {
         }));
     };
 
-    const  submitAd = (event) => {
+    const submitAd = (event) => {
         event.preventDefault();
         onAddAd(adData);
         alert('¡Anuncio creado correctamente!');

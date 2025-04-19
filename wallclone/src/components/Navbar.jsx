@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import '../style/navBar.css';
 
 const NavBar = ({ isLoggedIn, userName, onShowLogin,onShowRegister, onLogout }) => {
