@@ -95,7 +95,7 @@ const logout = () => {
           Cerrar
           </button>
         </div>
-        <Register />
+        <Register onLogin={logUserIn}/>
         </>
       )}
     {isLoggedIn && !showForm && (
@@ -120,4 +120,3 @@ const logout = () => {
   );
 }
 export default App
-zz

@@ -5,7 +5,7 @@ const NavBar = ({ isLoggedIn, userName, onShowLogin,onShowRegister, onLogout }) 
   
   return (
     <header className='navBar'>
-      <h1>IdealCars</h1>
+      <h1><a href="#"></a>IdealCars</h1>
       <div className='navLogRes'>
         {isLoggedIn ? (
           <>

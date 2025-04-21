@@ -17,6 +17,7 @@
 .navBar h1 {
     margin: 0;
     font-size: 1.5rem;
+    
 }
 
 .navLogRes {
@@ -53,8 +54,9 @@
     }
     .loginButton,.registerButton{
         font-size: 1rem;
-        padding: 0.6rem 1.4rem;
-        margin-right: 60px;
+        padding-right: 100px;
         border-radius: 0.8rem;
+        margin-left: 119px;
+        margin-right: -101px;
     }
 }
